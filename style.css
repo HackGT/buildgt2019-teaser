@@ -25,6 +25,7 @@ body {
     background-position: center center;
     color: #4A4A4A;
     font-family: "SpaceMono Regular", Times, serif;
+    overflow-x: hidden;
 }
 
 h1 {
