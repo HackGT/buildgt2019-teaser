@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "Gotham Book";
+    src: url("fonts/Gotham-Book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gotham Medium";
+    src: url("fonts/Gotham-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SpaceMono Regular";
+    src: url("fonts/SpaceMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SpaceMono Bold";
+    src: url("fonts/SpaceMono-Bold.ttf") format("truetype");
+}
+
+body {
+    margin: 0;
+    background-image: url(assets/bg.png);
+    background-size: cover;
+    background-position: center center;
+    color: #4A4A4A;
+    font-family: "SpaceMono Regular", Times, serif;
+}
+
+h1 {
+    font-family: "Gotham Medium", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 3.5em;
+    margin-bottom: 0.125em;
+}
+
+h2 {
+    font-family: "Gotham Book", Arial, sans-serif;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+h3 {
+    color: #036BFF;
+    font-weight: 300;
+    margin: 0;
+}
+
+b {
+    font-family: "SpaceMono Bold", Times, serif;
+}
+
+#about {
+    margin-top: 0.25em;
+    margin-bottom: 0;
+    color: black;
+}
+
+#info {
+    margin-top: 0.5em;
+}
+
+#splash {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    /*padding-top: 4em;*/
+    padding-bottom: 0;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.header {
+    padding-top: 2em;
+    flex: 0 1 auto;
+}
+
+#logo {
+    height: 10vh;
+}
+
+.container {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.col-1-3 {
+    flex: 1.25;
+}
+
+.col-2-3 {
+    flex: 2;
+}
+
+/*.col-1-3, .col-2-3 {
+    border: solid black 1px;
+}*/
+
+#signup {
+    margin-top: 1em;
+    width: 30%;
+    border-radius: 20em;
+    background-color: #8FBEFF;
+    border: solid #8FBEFF 0.25em;
+    font-size: 1.125em;
+    text-decoration: none;
+    padding: 0.75em 3em;
+    display: block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+#signup > span {
+    z-index: 100;
+    position: relative;
+    color: white;
+    /*for some reason leaving in the transition displays the transition from link color to white*/
+    /*transition: 0.25s all;*/
+}
+
+#signup:hover > span {
+    z-index: 100;
+    position: relative;
+    color: #8FBEFF;
+}
+
+#signup::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fefefe;
+    left: -100%;
+    top: 0;
+    z-index: 2;
+    border-radius: 20em;
+    transition: 0.25s all;
+}
+
+#signup:hover::before {
+    left: 0;
+}
+
+a {
+    color: white;
+}
+
+#hero {
+    background-image: url(assets/hero.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
