@@ -18,6 +18,10 @@
     src: url("fonts/SpaceMono-Bold.ttf") format("truetype");
 }
 
+body > div {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     background-image: url(assets/bg.png);
