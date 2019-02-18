@@ -18,10 +18,6 @@
     src: url("fonts/SpaceMono-Bold.ttf") format("truetype");
 }
 
-body > div {
-    overflow-x: hidden;
-}
-
 body {
     margin: 0;
     background-image: url(assets/bg.png);
@@ -319,4 +315,108 @@ footer {
     #signup {
         width: 40%;
     }
+}
+
+#carousel-images img {
+    display: inline-block;
+    float: left;
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+
+    /*float: left;*/
+}
+
+#carousel-images {
+    position: relative;
+    width: 400%;
+    transition: 0.5s all;
+    height: 80vh;
+}
+
+#carousel {
+    overflow-x: hidden;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#carousel-buttons {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#carousel-radio-1:checked~#carousel-images {
+  transform: translateX(0);
+}
+
+#carousel-radio-2:checked~#carousel-images {
+  transform: translateX(-25%);
+}
+
+#carousel-radio-3:checked~#carousel-images {
+  transform: translateX(-50%);
+}
+
+#carousel-radio-4:checked~#carousel-images {
+  transform: translateX(-75%);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#carousel-buttons > label {
+    width: 0.75em;
+    height: 0.75em;
+    border: solid #8fbeff 2px;
+    border-radius: 0.75em;
+    display: inline-block;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+#carousel-radio-1:checked~#carousel-buttons label[for="carousel-radio-1"], #carousel-radio-2:checked~#carousel-buttons label[for="carousel-radio-2"], #carousel-radio-3:checked~#carousel-buttons label[for="carousel-radio-3"], #carousel-radio-4:checked~#carousel-buttons label[for="carousel-radio-4"] {
+    background-color: #8fbeff;
+}
+
+.washed {
+    color: #8fbeff;
+    font-size: 1.25em;
+}
+
+.left-span {
+    float: left;
+}
+
+.right-span {
+    float: right;
+}
+
+nav {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    vertical-align: bottom;
+    padding: 1em 3em;
+}
+
+nav * {
+    display: inline-block;
+    flex: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+nav h3 {
+    font-weight: bold;
+    flex: 1.5;
+}
+
+nav a {
+    color: #8fbeff;
 }
