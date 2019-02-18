@@ -381,6 +381,7 @@ section:not(#splash):not(#last-year):not(#about) {
     border: solid #81b5ff 0.125em;
     display: inline-block;
     position: relative;
+    cursor: pointer;
 
     /*float: left;*/
 }
