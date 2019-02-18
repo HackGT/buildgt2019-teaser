@@ -91,6 +91,10 @@ section {
     margin-top: 1em;
 }
 
+section.baby {
+    min-height: 0;
+}
+
 section#about {
     font-size: 1.125em;
 }
@@ -319,13 +323,13 @@ input[type="radio"] {
 
 nav {
     position: sticky;
-    position: -webkit-sticky;
     top: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     vertical-align: bottom;
     padding: 1em 3em;
+    z-index: 10;
 }
 
 nav * {
@@ -376,18 +380,31 @@ section:not(#splash):not(#last-year):not(#about) {
     border-radius: 6em;
     border: solid #81b5ff 0.125em;
     display: inline-block;
+    position: relative;
 
     /*float: left;*/
 }
 
-#tracks-radio-1:checked~#tracks-buttons label[for="tracks-radio-1"], #tracks-radio-2:checked~#tracks-buttons label[for="tracks-radio-2"], #tracks-radio-3:checked~#tracks-buttons label[for="tracks-radio-3"] {
+label::after {
+    content: attr(track);
+    position: absolute;
+    font-size: 0.75em;
+    bottom: -2em;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #81b5ff;
+}
+
+#tracks-radio-1:checked~#tracks-buttons label[for="tracks-radio-1"], #tracks-radio-2:checked~#tracks-buttons label[for="tracks-radio-2"], #tracks-radio-3:checked~#tracks-buttons label[for="tracks-radio-3"], #tracks-radio-1:checked~#tracks-buttons label[for="tracks-radio-1"]::after, #tracks-radio-2:checked~#tracks-buttons label[for="tracks-radio-2"]::after, #tracks-radio-3:checked~#tracks-buttons label[for="tracks-radio-3"]::after {
     border-color: #036bff;
+    color: #036bff;
 }
 
 #tracks-info {
-    margin-top: 1em;
+    margin-top: 3em;
     margin-left: 4em;
     margin-right: 4em;
+    min-height: 40vh;
 }
 
 .track-info {
@@ -396,7 +413,9 @@ section:not(#splash):not(#last-year):not(#about) {
     transform: rotateX(180deg);
     opacity: 0;
     transition: 0.5s all;
-    width: 100%;
+    width: auto;
+    /* bad CSS on my part whoops */
+    margin-right: calc(4em + 10vw);
 }
 
 #tracks-radio-1:checked~#tracks-info #track-info-1, #tracks-radio-2:checked~#tracks-info #track-info-2, #tracks-radio-3:checked~#tracks-info #track-info-3 {
@@ -406,6 +425,24 @@ section:not(#splash):not(#last-year):not(#about) {
 
 .track-info > div {
     display: inline-block;
+}
+
+.table-div {
+    margin: 0 auto;
+}
+
+table {
+    font-size: 1.125em;
+}
+
+table td {
+    color: #036bff;
+    padding: 0.125em 1em;
+}
+
+table td:nth-child(2) {
+    color: black;
+    white-space: nowrap;
 }
 
 

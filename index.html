@@ -39,10 +39,10 @@
                 <input type="radio" name="carousel-radio" id="carousel-radio-4">
 
                 <div id="carousel-images">
-                    <img src="https://i.imgur.com/QfQj8A9.jpg"/>
-                    <img src="https://i.imgur.com/t8SSDAb.jpg"/>
-                    <img src="https://i.imgur.com/QfQj8A9.jpg"/>
-                    <img src="https://i.imgur.com/t8SSDAb.jpg"/>
+                    <img src="assets/BuildPhoto1.jpg"/>
+                    <img src="assets/BuildPhoto2.jpg"/>
+                    <img src="assets/BuildPhoto3.jpg"/>
+                    <img src="assets/BuildPhoto4.jpg"/>
                 </div>
 
                 <div id="carousel-buttons">
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section id="tracks">
+        <section id="tracks" class="baby">
             <h3 class="big center">TRACKS</h3>
 
             <div id="tracks-container">
@@ -84,21 +84,18 @@
                 <input type="radio" name="tracks-radio" id="tracks-radio-3">
 
                 <div id="tracks-buttons">
-                    <label for="tracks-radio-1"></label>
+                    <label for="tracks-radio-1" track="Prototyping"></label>
                     <div class="line"></div>
-                    <label for="tracks-radio-2"></label>
+                    <label for="tracks-radio-2" track="Electrical&nbsp;Design"></label>
                     <div class="line"></div>
-                    <label for="tracks-radio-3"></label>
+                    <label for="tracks-radio-3" track="Robotics"></label>
                 </div>
 
                 <div id="tracks-info">
                     <div class="track-info container" id="track-info-1">
                         <div class="track-description col-1-2">
-                            <p>Dorem Ipsum</p>
-                            <p>Dorem Ipsum</p>
-                            <p>Dorem Ipsum</p>
-                            <p>Dorem Ipsum</p>
-                            <p>Dorem Ipsum</p>
+                            <h3>Prototyping</h3>
+                            <p>It all starts with a prototype, and we're excited for you to learn how to make them!  We'll have workshops for all skills levels to help you build your dream hack!</p>
                         </div>
                         <div class="track-image col-1-2">
                             Some Picture
@@ -106,11 +103,8 @@
                     </div>
                     <div class="track-info container" id="track-info-2">
                         <div class="track-description col-1-2">
-                            <p>Porem Ipsum</p>
-                            <p>Porem Ipsum</p>
-                            <p>Porem Ipsum</p>
-                            <p>Porem Ipsum</p>
-                            <p>Porem Ipsum</p>
+                            <h3>Electrical Design</h3>
+                            <p>Learn the magic behind the hardware!  If you're interested in designing your own circuits, working with microcontrollers, and building wearables, then this track is for you!</p>
                         </div>
                         <div class="track-image col-1-2">
                             Some Picture
@@ -118,11 +112,8 @@
                     </div>
                     <div class="track-info container" id="track-info-3">
                         <div class="track-description col-1-2">
-                            <p>Scorem Ipsum</p>
-                            <p>Scorem Ipsum</p>
-                            <p>Scorem Ipsum</p>
-                            <p>Scorem Ipsum</p>
-                            <p>Scorem Ipsum</p>
+                            <h3>Robotics</h3>
+                            <p>See the power of hardware and software working together! We'll provide a variety of robotics kits, including Cozmos, LEGO Mindstorms, and more. We'll also have presentations to showcase robotics in the real world.</p>
                         </div>
                         <div class="track-image col-1-2">
                             Some Picture
@@ -130,8 +121,78 @@
                     </div>
                 </div>
             </div>
-
         </section>
+
+        <section id="schedule" class="baby">
+            <h3 class="big center">Schedule</h3>
+            <div class="table-div">
+                <table>
+                    <colgroup>
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 30%;">
+                        <col span="1" style="width: 60%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>Sat&nbsp;/</td>
+                            <td>08:00 AM</td>
+                            <td>Check-in &amp; Breakfast</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>09:00 AM</td>
+                            <td>Opening Ceremony</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>10:00 AM</td>
+                            <td>Hacking Starts</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>12:00 PM</td>
+                            <td>Lunch</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>03:00 PM</td>
+                            <td>Mid-day Snack</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>07:00 PM</td>
+                            <td>Dinner</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>10:00 PM</td>
+                            <td>Evening Snack</td>
+                        </tr>
+                        <tr>
+                            <td>Sun&nbsp;/</td>
+                            <td>12:00 AM</td>
+                            <td>Hacking Ends</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>12:30 AM</td>
+                            <td>Judging Starts</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>01:30 AM</td>
+                            <td>Judging Ends</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>02:00 AM</td>
+                            <td>Closing Ceremony</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
         <section id="faq">
             <h3>Frequently Asked Questions</h3>
             <div id="container">
@@ -229,6 +290,17 @@
                 </div>
             </div>
 
+        </section>
+        <section id="sponsors" class="baby">
+            <h3 class="big center">A huge thank you to our sponsors!</h3>
+            <div class="container center">
+                <div class="col-1-2">
+                    <p>Hive Logo</p>
+                </div>
+                <div class="col-1-2">
+                    <p>IS Logo</p>
+                </div>
+            </div>
         </section>
         <footer>
             <div id="left-footer">
