@@ -63,6 +63,11 @@ a {
     text-decoration: none;
 }
 
+#last-year .right-span, #last-year .left-span {
+    letter-spacing: 0.25em;
+    margin-bottom: 0.25em;
+}
+
 #about {
     margin-top: 0.25em;
     margin-bottom: 0;
@@ -121,6 +126,27 @@ section#faq h3 {
     flex: 1;
     max-width: 50%;
     float: left;
+}
+
+#sponsors .container {
+    display: inline-flex;
+}
+
+#sponsors .col-1-2 a {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#sponsors .col-1-2 img {
+    max-width: 100%;
+    display: block;
+    transition: 0.25s;
+}
+
+#sponsors .col-1-2 img:hover {
+    transform: scale(1.05) rotate(1deg);
 }
 
 .col-1-3 {
@@ -300,8 +326,10 @@ input[type="radio"] {
     border: solid #8fbeff 2px;
     border-radius: 0.75em;
     display: inline-block;
-    margin-top: 1em;
+    margin-top: 1.5em;
     cursor: pointer;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
 }
 
 #carousel-radio-1:checked~#carousel-buttons label[for="carousel-radio-1"], #carousel-radio-2:checked~#carousel-buttons label[for="carousel-radio-2"], #carousel-radio-3:checked~#carousel-buttons label[for="carousel-radio-3"], #carousel-radio-4:checked~#carousel-buttons label[for="carousel-radio-4"] {
@@ -332,7 +360,7 @@ nav {
     z-index: 10;
 }
 
-nav * {
+nav > div {
     display: inline-block;
     flex: 1;
     margin-top: auto;
@@ -340,13 +368,35 @@ nav * {
     text-align: center;
 }
 
-nav h3 {
+.nav-header {
     font-weight: bold;
     flex: 1.5;
 }
 
-nav a {
-    color: #8fbeff;
+nav > div > a {
+    color: #036BFF;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: 0.25s all;
+}
+
+nav > div > a::before {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #036BFF;
+    bottom: 0;
+    content: "";
+    transition: 0.25s all ease-out;
+}
+
+nav > div > a::before {
+    left: -100%;
+}
+
+nav > div > a:hover::before {
+    left: 0;
 }
 
 .big {
@@ -399,6 +449,22 @@ label::after {
 #tracks-radio-1:checked~#tracks-buttons label[for="tracks-radio-1"], #tracks-radio-2:checked~#tracks-buttons label[for="tracks-radio-2"], #tracks-radio-3:checked~#tracks-buttons label[for="tracks-radio-3"], #tracks-radio-1:checked~#tracks-buttons label[for="tracks-radio-1"]::after, #tracks-radio-2:checked~#tracks-buttons label[for="tracks-radio-2"]::after, #tracks-radio-3:checked~#tracks-buttons label[for="tracks-radio-3"]::after {
     border-color: #036bff;
     color: #036bff;
+}
+
+label[for="tracks-radio-1"] {
+    background-image: url('assets/P-Icon.svg');
+    background-size: cover;
+}
+
+
+label[for="tracks-radio-2"] {
+    background-image: url('assets/ED-Icon.svg');
+    background-size: cover;
+}
+
+label[for="tracks-radio-3"] {
+    background-image: url('assets/R-Icon.svg');
+    background-size: cover;
 }
 
 #tracks-info {
@@ -523,5 +589,12 @@ table td:nth-child(2) {
 
     #signup {
         width: 40%;
+    }
+
+    .track-image > img {
+        max-width: 40%;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
     }
 }
