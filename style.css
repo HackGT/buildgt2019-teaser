@@ -358,6 +358,7 @@ nav {
     vertical-align: bottom;
     padding: 1em 3em;
     z-index: 10;
+    border-bottom: solid #036BFF 1px;
 }
 
 nav > div {
@@ -379,6 +380,7 @@ nav > div > a {
     overflow: hidden;
     display: inline-block;
     transition: 0.25s all;
+    font-size: 1.125em;
 }
 
 nav > div > a::before {
@@ -413,7 +415,7 @@ section:not(#splash):not(#last-year):not(#about) {
 
 .line {
     display: inline-block;
-    width: 4em;
+    width: 8em;
     height: 3em;
     border-top: solid #81b5ff 2px;
     /*float: left;*/
@@ -432,6 +434,7 @@ section:not(#splash):not(#last-year):not(#about) {
     display: inline-block;
     position: relative;
     cursor: pointer;
+    font-size: 1.25em;
 
     /*float: left;*/
 }
@@ -504,12 +507,17 @@ table {
 
 table td {
     color: #036bff;
-    padding: 0.125em 1em;
+    padding: 0.5em 1em;
 }
 
 table td:nth-child(2) {
-    color: black;
+    color: #4A4A4A;
     white-space: nowrap;
+}
+
+.heading {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
 }
 
 
@@ -596,5 +604,24 @@ table td:nth-child(2) {
         text-align: center;
         margin: 0 auto;
         display: block;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    nav {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #tracks-buttons > label {
+        /*display: block;*/
+        width: 20vw;
+        height: 20vw;
+        border-radius: 20vw;
+    }
+
+    #tracks-buttons > label::after {
+        content: "";
     }
 }
