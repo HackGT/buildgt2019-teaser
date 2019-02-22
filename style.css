@@ -133,6 +133,11 @@ section#faq h3 {
     display: inline-flex;
 }
 
+#sponsors .col-1-2 {
+    padding: 0 8vw;
+    margin-bottom: 2em;
+}
+
 #sponsors .col-1-2 a {
     display: block;
     position: relative;
@@ -148,6 +153,10 @@ section#faq h3 {
 
 #sponsors .col-1-2 img:hover {
     transform: scale(1.05) rotate(1deg);
+}
+
+#sponsors h3 {
+    margin-bottom: 2em;
 }
 
 .col-1-3 {
@@ -322,15 +331,20 @@ input[type="radio"] {
 }
 
 #carousel-buttons > label {
-    width: 0.75em;
-    height: 0.75em;
+    width: 1.25em;
+    height: 1.25em;
     border: solid #8fbeff 2px;
-    border-radius: 0.75em;
+    border-radius: 1.25em;
     display: inline-block;
-    margin-top: 1.5em;
+    margin-top: 2em;
     cursor: pointer;
-    margin-left: 0.4em;
-    margin-right: 0.4em;
+    margin-left: 1em;
+    margin-right: 1em;
+    transition: 0.25s;
+}
+
+#carousel-buttons > label:hover {
+    background-color: rgba(143, 190, 255, 0.5);
 }
 
 #carousel-radio-1:checked~#carousel-buttons label[for="carousel-radio-1"], #carousel-radio-2:checked~#carousel-buttons label[for="carousel-radio-2"], #carousel-radio-3:checked~#carousel-buttons label[for="carousel-radio-3"], #carousel-radio-4:checked~#carousel-buttons label[for="carousel-radio-4"] {
@@ -361,6 +375,8 @@ nav {
     border-bottom: solid #036BFF 1px;
     transition: 0.5s all;
     margin-bottom: 2em;
+    padding: 0 10em;
+    padding-bottom: 1em;
 }
 
 nav.stuck {
@@ -380,13 +396,17 @@ nav > div {
     flex: 1.5;
 }
 
+.nav-header h3 {
+    font-weight: bold;
+}
+
 nav > div > a {
     color: #036BFF;
     position: relative;
     overflow: hidden;
     display: inline-block;
     transition: 0.25s all;
-    font-size: 1.125em;
+    font-size: 1.25em;
 }
 
 nav > div > a::before {
@@ -424,12 +444,12 @@ section:not(#splash):not(#last-year):not(#about) {
     width: 8em;
     height: 3em;
     border-top: solid #81b5ff 2px;
-    /*float: left;*/
 }
 
 #tracks-buttons {
     margin: 2em auto 0 auto;
     text-align: center;
+    font-size: 1.25em;
 }
 
 #tracks-buttons > label {
@@ -440,7 +460,6 @@ section:not(#splash):not(#last-year):not(#about) {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    font-size: 1.25em;
 
     /*float: left;*/
 }
@@ -483,6 +502,12 @@ label[for="tracks-radio-3"] {
     min-height: 40vh;
 }
 
+.track-description {
+    margin: auto auto;
+
+    font-size: 1.125em;
+}
+
 .track-info {
     display: flex;
     position: absolute;
@@ -508,12 +533,13 @@ label[for="tracks-radio-3"] {
 }
 
 table {
-    font-size: 1.125em;
+    font-size: 1.25em;
 }
 
 table td {
     color: #036bff;
     padding: 0.5em 1em;
+    white-space: nowrap;
 }
 
 table td:nth-child(2) {
@@ -526,6 +552,9 @@ table td:nth-child(2) {
     text-transform: uppercase;
 }
 
+#schedule {
+    margin-bottom: 30vh;
+}
 
 @media only screen and (min-width: 981px) {
 
@@ -542,9 +571,23 @@ table td:nth-child(2) {
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    nav > div > a {
+        font-size: 1em;
+    }
+}
+
 @media only screen and (max-width: 980px) {
+    #tracks-buttons > label {
+        width: 8em;
+        height: 8em;
+        border-radius: 8em;
+
+    }
+
     .line {
-        display: none;
+        width: 3em;
+        height: 4em;
     }
     .container {
         flex-flow: column;
@@ -611,21 +654,51 @@ table td:nth-child(2) {
         margin: 0 auto;
         display: block;
     }
+
+    #sponsors .col-1-2 {
+        margin-bottom: 2em;
+    }
+
+    #sponsors .col-1-2 a {
+        display: inline;
+        text-align: center;
+    }
+
+    #sponsors .col-1-2 img {
+        width: 50%;
+        margin: 0 auto;
+        
+    }
 }
 
 @media only screen and (max-width: 680px) {
     nav {
         display: none;
     }
+
+    #tracks-buttons > label {
+        width: 15vw;
+        height: 15vw;
+        border-radius: 15vw;
+
+    }
+
+    .line {
+        width: 5vw;
+        height: 7.5vw;
+    }
+
+    table td {
+        white-space: pre-wrap;
+    }
 }
 
-@media only screen and (max-width: 400px) {
-    #tracks-buttons > label {
-        /*display: block;*/
+@media only screen and (max-width: 420px) {/*nice*/
+    /*#tracks-buttons > label {
         width: 20vw;
         height: 20vw;
         border-radius: 20vw;
-    }
+    }*/
 
     #tracks-buttons > label::after {
         content: "";
