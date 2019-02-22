@@ -35,10 +35,11 @@ body {
 }
 
 h1 {
-    font-family: "Gotham Medium", Arial, sans-serif;
+    font-family: "SpaceMono Bold", Arial, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 5em;
+    letter-spacing: 0.15em;
+    line-height: 1.125em;
+    font-size: 6em;
     margin-bottom: 0.125em;
 }
 
