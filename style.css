@@ -18,10 +18,6 @@
     src: url("fonts/SpaceMono-Bold.ttf") format("truetype");
 }
 
-body > div {
-    overflow-x: hidden;
-}
-
 body {
     margin: 0;
     background-image: url(assets/bg.png);
@@ -39,10 +35,11 @@ body {
 }
 
 h1 {
-    font-family: "Gotham Medium", Arial, sans-serif;
+    font-family: "SpaceMono Bold", Arial, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 5em;
+    letter-spacing: 0.15em;
+    line-height: 1.125em;
+    font-size: 6em;
     margin-bottom: 0.125em;
 }
 
@@ -67,6 +64,11 @@ a {
     text-decoration: none;
 }
 
+#last-year .right-span, #last-year .left-span {
+    letter-spacing: 0.25em;
+    margin-bottom: 0.25em;
+}
+
 #about {
     margin-top: 0.25em;
     margin-bottom: 0;
@@ -76,7 +78,7 @@ a {
     margin-bottom: 1em;
 }
 
-#faq a {
+#faq a, #about a {
     color: #8FBEFF;
 }
 
@@ -93,6 +95,10 @@ section {
     flex-flow: column;
     min-height: 100%;
     margin-top: 1em;
+}
+
+section.baby {
+    min-height: 0;
 }
 
 section#about {
@@ -121,6 +127,36 @@ section#faq h3 {
     flex: 1;
     max-width: 50%;
     float: left;
+}
+
+#partners .container {
+    display: inline-flex;
+}
+
+#partners .col-1-2 {
+    padding: 0 8vw;
+    margin-bottom: 2em;
+}
+
+#partners .col-1-2 a {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#partners .col-1-2 img {
+    max-width: 100%;
+    display: block;
+    transition: 0.25s;
+}
+
+#partners .col-1-2 img:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+#partners h3 {
+    margin-bottom: 2em;
 }
 
 .col-1-3 {
@@ -244,6 +280,282 @@ footer {
     transform: scale(1.15) rotate(15deg);
 }
 
+
+#carousel-images img {
+    display: inline-block;
+    float: left;
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+
+    /*float: left;*/
+}
+
+#carousel-images {
+    position: relative;
+    width: 400%;
+    transition: 0.5s all;
+    height: 80vh;
+}
+
+#carousel {
+    overflow-x: hidden;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#carousel-buttons {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#carousel-radio-1:checked~#carousel-images {
+  transform: translateX(0);
+}
+
+#carousel-radio-2:checked~#carousel-images {
+  transform: translateX(-25%);
+}
+
+#carousel-radio-3:checked~#carousel-images {
+  transform: translateX(-50%);
+}
+
+#carousel-radio-4:checked~#carousel-images {
+  transform: translateX(-75%);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#carousel-buttons > label {
+    width: 1.25em;
+    height: 1.25em;
+    border: solid #8fbeff 2px;
+    border-radius: 1.25em;
+    display: inline-block;
+    margin-top: 2em;
+    cursor: pointer;
+    margin-left: 1em;
+    margin-right: 1em;
+    transition: 0.25s;
+}
+
+#carousel-buttons > label:hover {
+    background-color: rgba(143, 190, 255, 0.5);
+}
+
+#carousel-radio-1:checked~#carousel-buttons label[for="carousel-radio-1"], #carousel-radio-2:checked~#carousel-buttons label[for="carousel-radio-2"], #carousel-radio-3:checked~#carousel-buttons label[for="carousel-radio-3"], #carousel-radio-4:checked~#carousel-buttons label[for="carousel-radio-4"] {
+    background-color: #8fbeff;
+}
+
+.washed {
+    color: #8fbeff;
+    font-size: 1.25em;
+}
+
+.left-span {
+    float: left;
+}
+
+.right-span {
+    float: right;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    vertical-align: bottom;
+    padding: 1em 3em;
+    z-index: 10;
+    border-bottom: solid #036BFF 1px;
+    transition: 0.5s all;
+    margin-bottom: 2em;
+    padding: 0 10em;
+    padding-bottom: 1em;
+}
+
+nav.stuck {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+nav > div {
+    display: inline-block;
+    flex: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.nav-header {
+    font-weight: bold;
+    flex: 1.5;
+}
+
+.nav-header h3 {
+    font-weight: bold;
+}
+
+nav > div > a {
+    color: #036BFF;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: 0.25s all;
+    font-size: 1.25em;
+}
+
+nav > div > a::before {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #036BFF;
+    bottom: 0;
+    content: "";
+    transition: 0.25s all ease-out;
+}
+
+nav > div > a::before {
+    left: -100%;
+}
+
+nav > div > a:hover::before {
+    left: 0;
+}
+
+.big {
+    font-size: 2em;
+}
+
+.center {
+    text-align: center;
+}
+
+section:not(#splash):not(#last-year):not(#about) {
+    padding-top: 4em;
+}
+
+.line {
+    display: inline-block;
+    width: 8em;
+    height: 3em;
+    border-top: solid #81b5ff 2px;
+}
+
+#tracks-buttons {
+    margin: 2em auto 0 auto;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+#tracks-buttons > label {
+    width: 6em;
+    height: 6em;
+    border-radius: 6em;
+    border: solid #81b5ff 0.125em;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    /*float: left;*/
+}
+
+label::after {
+    content: attr(track);
+    position: absolute;
+    font-size: 0.75em;
+    bottom: -2em;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #81b5ff;
+}
+
+#tracks-radio-1:checked~#tracks-buttons label[for="tracks-radio-1"], #tracks-radio-2:checked~#tracks-buttons label[for="tracks-radio-2"], #tracks-radio-3:checked~#tracks-buttons label[for="tracks-radio-3"], #tracks-radio-1:checked~#tracks-buttons label[for="tracks-radio-1"]::after, #tracks-radio-2:checked~#tracks-buttons label[for="tracks-radio-2"]::after, #tracks-radio-3:checked~#tracks-buttons label[for="tracks-radio-3"]::after {
+    border-color: #036bff;
+    color: #036bff;
+}
+
+label[for="tracks-radio-1"] {
+    background-image: url('assets/P-Icon.svg');
+    background-size: cover;
+}
+
+
+label[for="tracks-radio-2"] {
+    background-image: url('assets/ED-Icon.svg');
+    background-size: cover;
+}
+
+label[for="tracks-radio-3"] {
+    background-image: url('assets/R-Icon.svg');
+    background-size: cover;
+}
+
+#tracks-info {
+    margin-top: 3em;
+    margin-left: 4em;
+    margin-right: 4em;
+    min-height: 40vh;
+}
+
+.track-description {
+    margin: auto auto;
+
+    font-size: 1.125em;
+}
+
+.track-info {
+    display: flex;
+    position: absolute;
+    transform: rotateX(180deg);
+    opacity: 0;
+    transition: 0.5s all;
+    width: auto;
+    /* bad CSS on my part whoops */
+    margin-right: calc(4em + 10vw);
+}
+
+#tracks-radio-1:checked~#tracks-info #track-info-1, #tracks-radio-2:checked~#tracks-info #track-info-2, #tracks-radio-3:checked~#tracks-info #track-info-3 {
+    opacity: 1;
+    transform: rotateZ(0deg);
+}
+
+.track-info > div {
+    display: inline-block;
+}
+
+.table-div {
+    margin: 0 auto;
+}
+
+table {
+    font-size: 1.25em;
+}
+
+table td {
+    color: #036bff;
+    padding: 0.5em 1em;
+    white-space: nowrap;
+}
+
+table td:nth-child(2) {
+    color: #4A4A4A;
+    white-space: nowrap;
+}
+
+.heading {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+#schedule {
+    margin-bottom: 30vh;
+}
+
 @media only screen and (min-width: 981px) {
 
     #about .col-2-3 {
@@ -254,13 +566,29 @@ footer {
         margin: auto 0;
     }
 
-    .col-1-2 > div {
+    #faq .col-1-2 > div {
         margin-right: 8em;
     }
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1200px) {
+    nav > div > a {
+        font-size: 1em;
+    }
+}
 
+@media only screen and (max-width: 980px) {
+    #tracks-buttons > label {
+        width: 8em;
+        height: 8em;
+        border-radius: 8em;
+
+    }
+
+    .line {
+        width: 3em;
+        height: 4em;
+    }
     .container {
         flex-flow: column;
     }
@@ -318,5 +646,61 @@ footer {
 
     #signup {
         width: 40%;
+    }
+
+    .track-image > img {
+        max-width: 40%;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #partners .col-1-2 {
+        margin-bottom: 2em;
+    }
+
+    #partners .col-1-2 a {
+        display: inline;
+        text-align: center;
+    }
+
+    #partners .col-1-2 img {
+        width: 50%;
+        margin: 0 auto;
+
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    nav {
+        display: none;
+    }
+
+    #tracks-buttons > label {
+        width: 15vw;
+        height: 15vw;
+        border-radius: 15vw;
+
+    }
+
+    .line {
+        width: 5vw;
+        height: 7.5vw;
+    }
+
+    table td {
+        white-space: pre-wrap;
+    }
+}
+
+@media only screen and (max-width: 420px) {/*nice*/
+    /*#tracks-buttons > label {
+        width: 20vw;
+        height: 20vw;
+        border-radius: 20vw;
+    }*/
+
+    #tracks-buttons > label::after {
+        content: "";
     }
 }

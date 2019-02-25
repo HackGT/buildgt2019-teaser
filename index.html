@@ -8,17 +8,16 @@
         <meta property="og:title"              content="BuildGT 2019" />
         <meta property="og:description"        content="March 2nd, 9:00 AM" />
         <meta property="og:image"              content="https://build.hack.gt/assets/buildgt-preview.png" />
-
     </head>
     <body>
-        <div>
+
         <section id="splash">
             <div class="header">
                 <img id="logo" src="assets/logo.svg"/>
             </div>
             <div class="container">
                 <div class="col-1-3">
-                    <h1>Let's Build</h1>
+                    <h1>Let&rsquo;s Build</h1>
                     <h3>Georgia Tech <br/>Instructional Center</h3>
                     <p id="time">March 2nd, 9:00 AM</p>
                     <a id="signup" href="https://registration.build.hack.gt/">
@@ -28,6 +27,41 @@
                 <div class="col-2-3" id="hero-img"></div>
             </div>
         </section>
+        <section id="last-year">
+
+            <div id="carousel">
+                <h3 class="washed">
+                    <span class="left-span">BuildGT 2018</span><span class="right-span">Invention Studio</span>
+                </h3>
+                <input type="radio" name="carousel-radio" id="carousel-radio-1" checked>
+                <input type="radio" name="carousel-radio" id="carousel-radio-2">
+                <input type="radio" name="carousel-radio" id="carousel-radio-3">
+                <input type="radio" name="carousel-radio" id="carousel-radio-4">
+
+                <div id="carousel-images">
+                    <img src="assets/BuildPhoto1.jpg"/>
+                    <img src="assets/BuildPhoto2.jpg"/>
+                    <img src="assets/BuildPhoto3.jpg"/>
+                    <img src="assets/BuildPhoto4.jpg"/>
+                </div>
+
+                <div id="carousel-buttons">
+                    <label for="carousel-radio-1"></label>
+                    <label for="carousel-radio-2"></label>
+                    <label for="carousel-radio-3"></label>
+                    <label for="carousel-radio-4"></label>
+                </div>
+
+            </div>
+        </section>
+        <nav>
+            <div class="nav-header"><a href="#"><h3>BuildGT</h3></a></div>
+            <div><a href="#about">About</a></div>
+            <div><a href="#routes">Routes</a></div>
+            <div><a href="#schedule">Schedule</a></div>
+            <div><a href="#partners">Partners</a></div>
+            <div><a href="#faq">FAQs</a></div>
+        </nav>
         <section id="about">
             <div class="container">
                 <div class="col-2-3" id="about-img"></div>
@@ -35,12 +69,130 @@
                     <h3>About</h3>
                     <p>BuildGT is back for its second iteration, and it will be better than ever! More hardware, more workshops, and more time to create!</p>
 
-                    <p>Feel unprepared? Don't worry! We'll have plenty of mentors on hand to help with projects and tooling. Also, look out for BuildGT Week - a week-long celebration of hardware hacking that will feature hands-on workshops from HackGT and our partners.</p>
+                    <p>Feel unprepared? Don't worry! We'll have plenty of mentors on hand to help with projects and tooling. Also, check out <a href="https://www.facebook.com/events/529254714231993/">BuildGT Week</a> - a week-long celebration of hardware hacking that will feature hands-on workshops from HackGT and our partners.</p>
 
                     <p>Join us as HackGT ventures into the world of prototyping. Create something novel, something hilarious, or something that changes the world!</p>
                 </div>
             </div>
         </section>
+        <section id="routes">
+            <h3 class="big center heading">Routes</h3>
+
+            <div id="tracks-container">
+                <input type="radio" name="tracks-radio" id="tracks-radio-1" checked>
+                <input type="radio" name="tracks-radio" id="tracks-radio-2">
+                <input type="radio" name="tracks-radio" id="tracks-radio-3">
+
+                <div id="tracks-buttons">
+                    <label for="tracks-radio-1" track="Bootcamp"></label>
+                    <div class="line"></div>
+                    <label for="tracks-radio-2" track="Devices"></label>
+                    <div class="line"></div>
+                    <label for="tracks-radio-3" track="Robotics"></label>
+                </div>
+
+                <div id="tracks-info">
+                    <div class="track-info container" id="track-info-1">
+                        <div class="track-description col-1-2">
+                            <h3>Bootcamp</h3>
+                            <p>New to hardware? No problem! The bootcamp route has workshops for beginners to help you build your dream hack!</p>
+                        </div>
+                        <div class="track-image col-1-2">
+                            <img src="assets/P-Illo.svg"/>
+                        </div>
+                    </div>
+                    <div class="track-info container" id="track-info-2">
+                        <div class="track-description col-1-2">
+                            <h3>Devices</h3>
+                            <p>Learn the magic behind the hardware!  If you're interested in designing your own circuits, working with microcontrollers, and building wearables, then this route is for you!</p>
+                        </div>
+                        <div class="track-image col-1-2">
+                            <img src="assets/ED-Illo.svg"/>
+                        </div>
+                    </div>
+                    <div class="track-info container" id="track-info-3">
+                        <div class="track-description col-1-2">
+                            <h3>Robotics</h3>
+                            <p>See the power of hardware and software working together! We'll provide a variety of robotics kits, including Cozmos, LEGO Mindstorms, and more.</p>
+                        </div>
+                        <div class="track-image col-1-2">
+                            <img src="assets/R-Illo.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="baby">
+            <h3 class="big center heading">Schedule</h3>
+            <div class="table-div">
+                <table>
+                    <colgroup>
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 30%;">
+                        <col span="1" style="width: 60%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>Sat&nbsp;/</td>
+                            <td>08:00 AM</td>
+                            <td>Check-in &amp; Breakfast</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>09:00 AM</td>
+                            <td>Opening Ceremony</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>10:00 AM</td>
+                            <td>Hacking Starts</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>12:00 PM</td>
+                            <td>Lunch</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>03:00 PM</td>
+                            <td>Mid-day Snack</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>07:00 PM</td>
+                            <td>Dinner</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>10:00 PM</td>
+                            <td>Evening Snack</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>11:00 PM</td>
+                            <td>Hacking Ends</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>11:30 PM</td>
+                            <td>Judging Starts</td>
+                        </tr>
+                        <tr>
+                            <td>Sun&nbsp;/</td>
+                            <td>12:30 AM</td>
+                            <td>Judging Ends</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>01:00 AM</td>
+                            <td>Closing Ceremony</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
         <section id="faq">
             <h3>Frequently Asked Questions</h3>
             <div id="container">
@@ -58,7 +210,7 @@
                     </div>
 
                     <div>
-                        <b>How much will this cost</b>
+                        <b>How much will this cost?</b>
                         <p>BuildGT is completely free! All
                         you need to show up! We will
                         provide the food, swag, and any
@@ -94,14 +246,13 @@
                 <div class="col-1-2">
                     <div>
                         <b>When can I register?</b>
-                        <p>Registration is open! You can do so <a href="https://registration.build.hack.gt/">here</a>!</p>
+                        <p>Registration is open until Wednesday, February 27th at 11:59 PM EST! You can do so <a href="https://registration.build.hack.gt/">here</a>!</p>
                     </div>
 
                     <div>
                         <b>How long is the hackathon?</b>
-                        <p>This year's event will be from 9am
-                        to 12am on March 2nd. A more
-                        detailed schedule is coming soon.</p>
+                        <p>This year's event will be from 8am on March 2nd
+                        to 2am on March 3rd. You can find a more detailed schedule above!</p>
                     </div>
 
                     <div>
@@ -109,7 +260,7 @@
                         <p>We'll be providing lots of
                         hardware, including Arduinos,
                         Oculus Rifts, Raspberry Pis, and
-                        more! A full list of available hardware is coming soon.</p>
+                        more! A full list of available hardware is available <a href="https://hardware.hack.gt">here</a>.</p>
                     </div>
 
                     <div>
@@ -133,11 +284,22 @@
                     </div>
                     <div>
                         <b>I have another question.</b>
-                        <p>Email us at hello@hack.gt!</p>
+                        <p>Email us at <a href="mailto:hello@hack.gt">hello@hack.gt</a>!</p>
                     </div>
                 </div>
             </div>
 
+        </section>
+        <section id="partners" class="baby">
+            <h3 class="big center">A huge thank you to our partners!</h3>
+            <div class="container center">
+                <div class="col-1-2">
+                    <a href="https://hive.ece.gatech.edu/"><img src="assets/Hive-Logo.png"/></a>
+                </div>
+                <div class="col-1-2">
+                    <a href="https://inventionstudio.gatech.edu/"><img src="assets/IS-Logo.png"/></a>
+                </div>
+            </div>
         </section>
         <footer>
             <div id="left-footer">
@@ -164,6 +326,7 @@
                 <a href="https://hack.gt/about/">About HackGT <img src="assets/hackgtlogo.png"/></a>
             </div>
         </footer>
-        </div>
+
+        <script src="js/sticky-listen.js"></script>
     </body>
 </html>
