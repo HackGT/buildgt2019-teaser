@@ -78,7 +78,7 @@ a {
     margin-bottom: 1em;
 }
 
-#faq a {
+#faq a, #about a {
     color: #8FBEFF;
 }
 
@@ -667,7 +667,7 @@ table td:nth-child(2) {
     #sponsors .col-1-2 img {
         width: 50%;
         margin: 0 auto;
-        
+
     }
 }
 
